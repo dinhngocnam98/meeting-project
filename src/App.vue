@@ -1,26 +1,77 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <SideBarComponent />
+    <div class="main">
+
+      <div class="header">
+        <h2>Subscribed to the list</h2>
+      </div>
+
+      <div class="register">
+        <div class="host">
+          <ScheduleList />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ScheduleList from './components/ScheduleList';
+import SideBarComponent from "@/components/SideBarComponent";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    SideBarComponent,
+    ScheduleList,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+img{
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+body{
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+
+
+.main{
+  margin-left: 96px;
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  height: 93vh;
+  width: 90vw;
+}
+
+.main .header{
+  margin-bottom: 20px;
+}
+
+.main .header h3{
+  font-size: 24px;
+  font-weight: 600;
+}
+
 </style>
