@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2 style="padding: 10px">Subscribed to the list</h2>
     <ul>
       <li class="list-item" v-for="schedule in schedules" :key="schedule.id">
         <ScheduleItem
@@ -27,7 +28,6 @@ export default {
         { id: 2, title: 'Meeting B', status: 'Approved', time: '15:30, 21-07-2024' },
         { id: 3, title: 'Meeting C', status: 'Approved', time: '15:30, 21-07-2024' },
         { id: 5, title: 'Meeting D', status: 'Approved', time: '15:30, 21-07-2024' },
-        { id: 6, title: 'Meeting E', status: 'Approved', time: '15:30, 21-07-2024' },
       ],
     };
   },

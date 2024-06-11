@@ -4,12 +4,11 @@
     <div class="main">
 
       <div class="header">
-        <h2>Subscribed to the list</h2>
+        <h1 style="color: #1263dd">Smart Meeting</h1>
       </div>
-
       <div class="register">
         <div class="host">
-          <ScheduleList />
+          <router-view />
         </div>
       </div>
 
@@ -19,14 +18,12 @@
 </template>
 
 <script>
-import ScheduleList from './components/ScheduleList';
 import SideBarComponent from "@/components/SideBarComponent";
 
 export default {
   name: 'App',
   components: {
     SideBarComponent,
-    ScheduleList,
   },
 };
 </script>

@@ -13,9 +13,12 @@
       <div class="item">
         <i class="ri-mic-2-fill"></i>
       </div>
-      <div class="item active">
+      <router-link to="/" class="item">
         <i class="ri-message-2-fill"></i>
-      </div>
+      </router-link>
+      <router-link to="/feedback" class="item">
+        <i class="ri-mail-line"></i>
+      </router-link>
     </div>
     <img src="../assets/profile.png">
   </aside>
@@ -66,5 +69,9 @@ export default {
 .sidebar .nav .item i:hover{
   color: #1263dd;
 }
+.item {
+  text-decoration: none;
+}
+
 
 </style>
